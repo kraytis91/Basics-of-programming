@@ -1,0 +1,28 @@
+[StartCode]
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace CSlight
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string name;
+            int age;
+            string work;
+            Console.Write("Приветствую! Как тебя зовут? ");
+            name = Console.ReadLine();
+            Console.Write("Сколько тебе лет? ");
+            age = Convert.ToInt32(Console.ReadLine()); // конвертируем прочитанную строчку в целочисленный int
+            Console.Write("Где ты работаешь? ");
+            work = Console.ReadLine();
+            Console.WriteLine($"Тебя зовут {name}, тебе {age} лет, работаешь {work}.");
+            Console.ReadKey();
+        }
+    }
+}
+[EndCode]
