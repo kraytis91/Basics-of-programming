@@ -1,0 +1,27 @@
+[StartCode]
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace CSlight
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int playerGold;
+            int crystalCount;
+            int crystalPrice = 5;
+            Console.Write("Привет, сколько у тебя золота? ");
+            playerGold = Convert.ToInt32(Console.ReadLine());
+            Console.Write($"Кристалл стоит {crystalPrice} золота, сколько кристаллов ты хочешь купить? ");
+            crystalCount = Convert.ToInt32(Console.ReadLine());
+            playerGold -= crystalCount * crystalPrice;
+            Console.Write($"Ты купил {crystalCount} кристаллов, сейчас у тебя {playerGold} золота и {crystalCount} кристаллов.");
+            Console.ReadKey();
+        }
+    }
+}
+[EndCode]
