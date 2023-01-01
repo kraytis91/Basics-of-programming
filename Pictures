@@ -1,0 +1,29 @@
+[StartCode]
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace CSlight
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int fieldWidth = 3;
+            int fieldHeight;
+            int totalPictures = 52;
+            int displayedPictures;
+            int leftPictures;
+            Console.Write("Сколько картинок помещается в высоту? ");
+            fieldHeight = Convert.ToInt32(Console.ReadLine());
+            displayedPictures = fieldHeight * fieldWidth;
+            leftPictures = totalPictures - displayedPictures;
+            Console.Write($"Можно будет вывести {fieldHeight} рядов картинок, {displayedPictures} - картинок будет всего на экране, " +
+                $"{leftPictures} - картинок будет сверх меры");
+            Console.ReadKey();
+        }
+    }
+}
+[EndCode]
