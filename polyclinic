@@ -11,17 +11,20 @@ namespace CSlight
     {
         static void Main(string[] args)
         {
-            int peopleInLine;
+            int peopleInQueue;
             int patientAppointmentTime = 10;
-            int waitingTime;
-            int waitingTimeHours;
-            int waitingTimeMinutes;
+            int waitingTimeInQueue;
+            int WaitingTimeInQueueHours;
+            int waitingTimeInQueueMinutes;
+            int minutesInAnHour = 60;
+            
             Console.Write("Сколько старушек перед вами в очереди? ");
-            peopleInLine = Convert.ToInt32(Console.ReadLine());
-            waitingTime = peopleInLine * patientAppointmentTime;
-            waitingTimeHours = waitingTime / 60;
-            waitingTimeMinutes = waitingTime % 60;
-            Console.Write($"Вы должны отстоять в очереди {waitingTimeHours} часа и {waitingTimeMinutes} минут.");
+            peopleInQueue = Convert.ToInt32(Console.ReadLine());
+            waitingTimeInQueue = peopleInQueue * patientAppointmentTime;
+            WaitingTimeInQueueHours = waitingTime / minutesInAnHour;
+            waitingTimeInQueueMinutes = waitingTime % minutesInAnHour;
+            Console.Write($"Вы должны отстоять в очереди {WaitingTimeInQueueHours} часа и {waitingTimeInQueueMinutes} минут.");
+            
             Console.ReadKey();
         }
     }
