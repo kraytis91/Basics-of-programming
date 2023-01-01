@@ -13,17 +13,17 @@ namespace CSlight
         {
             int peopleInQueue;
             int patientAppointmentTime = 10;
-            int waitingTimeInQueue;
-            int WaitingTimeInQueueHours;
+            int totalMinutesInQueue;
+            int waitingTimeInQueueHours;
             int waitingTimeInQueueMinutes;
             int minutesInAnHour = 60;
             
             Console.Write("Сколько старушек перед вами в очереди? ");
             peopleInQueue = Convert.ToInt32(Console.ReadLine());
-            waitingTimeInQueue = peopleInQueue * patientAppointmentTime;
-            WaitingTimeInQueueHours = waitingTimeInQueue / minutesInAnHour;
-            waitingTimeInQueueMinutes = waitingTimeInQueue % minutesInAnHour;
-            Console.Write($"Вы должны отстоять в очереди {WaitingTimeInQueueHours} часа и {waitingTimeInQueueMinutes} минут.");
+            totalMinutesInQueue = peopleInQueue * patientAppointmentTime;
+            waitingTimeInQueueHours = totalMinutesInQueue / minutesInAnHour;
+            waitingTimeInQueueMinutes = totalMinutesInQueue % minutesInAnHour;
+            Console.Write($"Вы должны отстоять в очереди {waitingTimeInQueueHours} часа и {waitingTimeInQueueMinutes} минут.");
             
             Console.ReadKey();
         }
