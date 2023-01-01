@@ -21,8 +21,8 @@ namespace CSlight
             Console.Write("Сколько старушек перед вами в очереди? ");
             peopleInQueue = Convert.ToInt32(Console.ReadLine());
             waitingTimeInQueue = peopleInQueue * patientAppointmentTime;
-            WaitingTimeInQueueHours = waitingTime / minutesInAnHour;
-            waitingTimeInQueueMinutes = waitingTime % minutesInAnHour;
+            WaitingTimeInQueueHours = waitingTimeInQueue / minutesInAnHour;
+            waitingTimeInQueueMinutes = waitingTimeInQueue % minutesInAnHour;
             Console.Write($"Вы должны отстоять в очереди {WaitingTimeInQueueHours} часа и {waitingTimeInQueueMinutes} минут.");
             
             Console.ReadKey();
