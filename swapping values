@@ -1,0 +1,26 @@
+[StartCode]
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace CSlight
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string firstName = "Zhukov";
+            string surname = "Nikolay";
+            Console.WriteLine($"Имя: {firstName}, Фамилия: {surname}. Упс.. что-то пошло не так...");
+            string temporaryVariableForName;
+            temporaryVariableForName = firstName;
+            firstName = surname;
+            surname = temporaryVariableForName;
+            Console.WriteLine($"Имя: {firstName}, Фамилия: {surname}. Теперь верно!");
+            Console.ReadKey();
+        }
+    }
+}
+[EndCode]
