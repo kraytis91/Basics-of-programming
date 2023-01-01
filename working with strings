@@ -17,7 +17,7 @@ namespace CSlight
             Console.Write("Приветствую! Как тебя зовут? ");
             name = Console.ReadLine();
             Console.Write("Сколько тебе лет? ");
-            age = Convert.ToInt32(Console.ReadLine()); // конвертируем прочитанную строчку в целочисленный int
+            age = Convert.ToInt32(Console.ReadLine());
             Console.Write("Где ты работаешь? ");
             work = Console.ReadLine();
             Console.WriteLine($"Тебя зовут {name}, тебе {age} лет, работаешь {work}.");
